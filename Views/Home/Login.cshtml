@@ -1,0 +1,32 @@
+﻿@model Chat_With_Polling_SignalR_DotNetCore_MySQL.Models.Login
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+
+<section class="text-center">
+    <h3> DOTNET CORE CHAT WITH SignalR </h3>
+</section>
+
+<section class="card mb-3 p-4">
+    <h5 class="card-title text-center">CHAT BOX </h5>
+    <form method="POST" asp-action="Login" class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="UserName" class="control-label"></label>
+            <select asp-for="UserName" asp-items="@ViewBag.CHATPARTNER" class="btn btn-primary dropdown-toggle" style="width: 100%;"></select>
+        </div>
+
+
+        <hr />
+        <div class="form-group">
+            <label asp-for="ChatPartner" class="control-label"></label>
+            <select asp-for="ChatPartner" asp-items="@ViewBag.CHATPARTNER" class="btn btn-primary dropdown-toggle" style="width: 100%;"></select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Login" class="btn btn-primary" />
+        </div>
+    </form>
+</section>
+
+
